@@ -2,7 +2,7 @@
 
 Aquest és el primer llenguatge de marques que he estudiat a DAW.
 
-És un llenguatge de marques amplament utilitzat, que s'utilitza per formatar text de manera senzilla i fàcil de llegir. La seva simplicitat el fa molt popular, ja que requereix de molts pocs símbols per cada funcionalitat, al contrari d'altres llenguatges de marques com HTML, que requereixen d'escriure paraules llargues, i repetides vegades. S'utilitza sovint a documentació en general, però també s'implementa a molts llocs web/aplicacions, com ara GitHub, Discord, WhatsApp i ChatGPT.
+És un llenguatge de marques amplament utilitzat, que es fa servir per formatar text de manera senzilla i fàcil de llegir. La seva simplicitat el fa molt popular, ja que requereix de molts pocs símbols per cada funcionalitat, al contrari d'altres llenguatges de marques com HTML, que requereixen d'escriure paraules llargues, i repetides vegades. S'utilitza sovint a documentació en general, però també s'implementa a molts llocs web/aplicacions, com ara GitHub, Discord, WhatsApp i ChatGPT.
 
 Els documents escrits en Markdown tenen una extensió .**md** (**M**ark**d**own). Aquest mateix document (*README.md*) està escrit en Markdown.
 
@@ -16,9 +16,9 @@ I queda així: **Text en negreta**
 
 Cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal.
 
-La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, 
+La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
-Moltes aplicacions (no totes) permeten incloure HTML dincs d'un document de Markdown, com per exemple:
+Però hi ha una excepció; moltes aplicacions (no totes) permeten incloure HTML dincs d'un document de Markdown, com per exemple:
 
 ```
 <html>
