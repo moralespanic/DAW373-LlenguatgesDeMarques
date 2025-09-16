@@ -16,14 +16,14 @@ I queda així: **Text en negreta**
 
 Cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal.
 
-Cada aplicació té les seven
+La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, 
 
-Moltes aplicacions permeten incloure HTML dincs d'un document de Markdown, com per exemple:
+Moltes aplicacions (no totes) permeten incloure HTML dincs d'un document de Markdown, com per exemple:
 
 ```
 <html>
-    <p>Aquesta és una imatge d'un <b style="font-family: 'Times New Roman'; font-size: 20px;color: red">gos</b>:</p>
-    <img src="../assets/Gos.jpg" style="max-width: 50%; border-radius: 50px">
+    <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">gos</b>:</p>
+    <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: auto; border-radius: 50px">
 </html>
 ```
 
@@ -32,18 +32,23 @@ Que es renderitza així:
 ---
 
 <html>
-    <p>Aquesta és una imatge d'un <b style="font-family: 'Times New Roman'; font-size: 20px;color: red">gos</b>:</p>
-    <img src="../assets/Gos.jpg" style="max-width: 50%; border-radius: 50px">
-    <del>aaaa</del>
+    <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">gos</b>:</p>
+    <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: auto; border-radius: 50px">
 </html>
 
 ---
 
 > La imatge del gos la he tret de [Flickr](https://flic.kr/p/4VRgLc).
 
-També, existeixen moltes altres funcionalitats de Markdown que algunes aplicacions implementen, i d'altres no. Em centraré principalment en les funcionalitats bàsiques de Markdown; les que totes les aplicacions suporten.
+També, existeixen moltes altres funcionalitats de Markdown que algunes aplicacions implementen, i d'altres no.
+
+Ara, detallaré unes quantes funcionalitats de Markdown. No sé si hi són totes, però sí que n'hi ha una gran part (les més importants).
 
 ## Funcionalitats bàsiques de Markdown
+
+Aquestes són les funcionalitats més bàsiques de Markdown, i totes les aplicacions que utilitzin aquest llenguatge les hauríen d'implementar.
+
+> Algunes aplicacions, com ara WhatsApp, implementen Markdown però de forma parcial, cosa que vol dir que no ofereixen totes les funcionalitats d'aquest llenguatge.
 
 ### Estils tipogràfics
 
@@ -66,6 +71,8 @@ També, existeixen moltes altres funcionalitats de Markdown que algunes aplicaci
 ### Notes al peu
 
 ## Funcionalitats avançades de Markdown
+
+Aquestes funcionalitats no tenen per què estar implementades a totes les aplicacions que suporten Markdown. I pot ser que n'existeixin més.
 
 ### HTML incrustat
 
