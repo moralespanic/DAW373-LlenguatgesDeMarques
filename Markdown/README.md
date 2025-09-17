@@ -7,7 +7,7 @@ Aquest és el primer llenguatge de marques que he estudiat a DAW.
 Els documents escrits en Markdown tenen una extensió .**md** (**M**ark**d**own). Aquest mateix document (*README.md*) està escrit en Markdown.
 
 Per exemple, per escriure un text amb negreta, s'ha d'escriure de la següent forma:
-```
+```markdown
 **Text en negreta**
 ```
 I queda així: **Text en negreta**
@@ -24,7 +24,7 @@ Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no est
 
 Cal que per cada salt de línia, deixem una línia entre mig, ja que si no, les dues línies es renderitzaran compactades en una mateixa línia:
 
-```
+```markdown
 Línia 1
 
 Línia 2
@@ -40,13 +40,13 @@ Línia 3
 
 Això és una característica que podríem aprofitar per si tenim massa text, i el volem estructurar dins del fitxer md, però que a l'hora de renderitzar-lo, que es vegi tot al mateix paràgraf.
 
-Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a 
+Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a totes les aplicacions.
 
 La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
 Però hi ha una excepció; algunes aplicacions permeten incloure HTML dincs d'un document de Markdown, com per exemple:
 
-```
+```html
 <html>
     <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">gos</b>:</p>
     <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: auto; border-radius: 50px">
@@ -70,7 +70,7 @@ Això és degut a que GitHub (i moltes altres aplicacions) imposa l'ús de les s
 
 > La imatge del gos la he tret de [Flickr](https://www.flickr.com/photos/kb35/2578458103/).
 
-També, existeixen moltes altres funcionalitats de Markdown que algunes aplicacions implementen, i d'altres no.
+També, existeixen moltes altres funcionalitats de Markdown que algunes aplicacions implementen, i d'altres no. Jo em centraré principalment en les que GitHub implementa, ja que GitHub té una implementació de Markdown molt extensa.
 
 ## Funcionalitats bàsiques de Markdown
 
@@ -80,55 +80,47 @@ Aquestes són les funcionalitats més bàsiques de Markdown, i totes les aplicac
 
 Per aplicar *cursiva* o _itàlica_ a un text, podem envoltar-lo d'asteriscs o de guions baixos:
 
-```
+```markdown
 *Text d'exemple 1.*
 
 _Text d'exemple 2._
 ```
-
-I queda així:
-
-*Text d'exemple 1.*
-
-_Text d'exemple 2._
 
 Per aplicar **negreta** a un text, podem envoltar-lo de dobles asteriscs, o de dobles guions baixos:
 
-```
+```markdown
 **Text d'exemple 1.**
 
 __Text d'exemple 2.__
 ```
-
-Que queda així:
-
-**Text d'exemple 1.**
-
-__Text d'exemple 2.__
 
 ### Capçaleres
 
 Les capçaleres s'utilitzen per estructurar un document, mitjançant títols o apartats.
 
-Provant nivells de capçaleres:
+Per crear una capçalera, s'ha d'escriure un coixinet (#) seguit del títol. Tenim fins a 6 nivells de capçalera:
 
-# nivell 1
+```markdown
+# Capçalera de nivell 1
+## Capçalera de nivell 2
+### Capçalera de nivell 3
+#### Capçalera de nivell 4
+##### Capçalera de nivell 5
+###### Capçalera de nivell 6
+####### Capçalera de nivell 7
+```
 
-## nivell 2
+Això es renderitza de la següent forma:
 
-### nivell 3
+# Capçalera de nivell 1
+## Capçalera de nivell 2
+### Capçalera de nivell 3
+#### Capçalera de nivell 4
+##### Capçalera de nivell 5
+###### Capçalera de nivell 6
+####### Capçalera de nivell 7
 
-#### nivell 4
-
-##### nivell 5
-
-###### nivell 6
-
-####### nivell 7
-
-a partir d'aquí ja no se'm renderitza al previsualitzador
-
-######## nivell 8
+A partir de la capçalera de nivell 6 (no inclòs), no es renderitzen més nivells de capçalera.
 
 ### Hipervincles
 
@@ -150,7 +142,7 @@ a partir d'aquí ja no se'm renderitza al previsualitzador
 
 ## Funcionalitats avançades de Markdown
 
-Aquestes funcionalitats no tenen per què estar implementades a totes les aplicacions que suporten Markdown, ja que no segueixen l'estàndard CommonMark.
+Aquestes funcionalitats no tenen per què estar implementades a totes les aplicacions que suporten Markdown, ja que no estan a l'estàndard CommonMark.
 
 ### HTML incrustat
 
