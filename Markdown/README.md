@@ -31,7 +31,7 @@ Línia 2
 Línia 3
 ```
 
-Això es renderitza de la següent forma:
+Que es renderitza de la següent forma:
 
 Línia 1
 
@@ -74,11 +74,9 @@ També, existeixen moltes altres funcionalitats de Markdown que algunes aplicaci
 
 ## Funcionalitats bàsiques de Markdown
 
-Aquestes són les funcionalitats més bàsiques de Markdown, i totes les aplicacions que utilitzin aquest llenguatge les hauríen d'implementar. No sé si hi són totes, però sí que n'hi ha una gran part (les més importants).
+Aquestes són les funcionalitats més bàsiques de Markdown, i totes les aplicacions que segueixin CommonMark les hauríen d'implementar. No sé si hi són totes, però sí que n'hi ha una gran part (les més importants).
 
 ### Estils tipogràfics
-
----
 
 Per aplicar *cursiva* o _itàlica_ a un text, podem envoltar-lo d'asteriscs o de guions baixos:
 
@@ -94,8 +92,6 @@ I queda així:
 
 _Text d'exemple 2._
 
----
-
 Per aplicar **negreta** a un text, podem envoltar-lo de dobles asteriscs, o de dobles guions baixos:
 
 ```
@@ -110,15 +106,29 @@ Que queda així:
 
 __Text d'exemple 2.__
 
----
+### Capçaleres
 
-Underline
+Les capçaleres s'utilitzen per estructurar un document, mitjançant títols o apartats.
 
-Per _subratllar_ text, 
+Provant nivells de capçaleres:
 
----
+# nivell 1
 
-Strikethrough
+## nivell 2
+
+### nivell 3
+
+#### nivell 4
+
+##### nivell 5
+
+###### nivell 6
+
+####### nivell 7
+
+a partir d'aquí ja no se'm renderitza al previsualitzador
+
+######## nivell 8
 
 ### Hipervincles
 
@@ -140,7 +150,7 @@ Strikethrough
 
 ## Funcionalitats avançades de Markdown
 
-Aquestes funcionalitats no tenen per què estar implementades a totes les aplicacions que suporten Markdown. I pot ser que n'existeixin més.
+Aquestes funcionalitats no tenen per què estar implementades a totes les aplicacions que suporten Markdown, ja que no segueixen l'estàndard CommonMark.
 
 ### HTML incrustat
 
