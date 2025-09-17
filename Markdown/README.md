@@ -18,7 +18,7 @@ Markdown és un llenguatge que va ser creat per John Gruber a l'any 2004, que ve
 
 Per solucionar aquest problema, va aparèixer **CommonMark**, que és un estàndard de Markdown pensat per ser fàcil d'entendre i implementar a les aplicacions. El [manual](https://commonmark.org/help/) d'aquest estàndard és més extens i fàcil d'entendre que l'original.
 
-Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no estan obligades a implementar-lo. Existeixen molts exemples d'aplicacions que no implementen Markdown seguint CommonMark, ja que no requereixen de totes les funcionalitats que aquest aporta. Un exemple molt clar és WhatsApp, que es basa en Markdown per donar alguns estils tipogràfics bàsics i crear blocs de codi, però no permet escollir el llenguatge de programació del bloc de codi, ni crear taules. A més, WhatsApp permet subratllar text i tatxar-lo, cosa que no està definida a CommonMark.
+Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no estan obligades a implementar-lo. Existeixen molts exemples d'aplicacions que no implementen Markdown seguint CommonMark, ja que no requereixen de totes les funcionalitats que aquest aporta. Un exemple molt clar és WhatsApp, que es basa en Markdown per donar alguns estils tipogràfics bàsics i crear blocs de codi, però no permet escollir el llenguatge de programació del bloc de codi, ni crear taules. A més, WhatsApp permet subratllar text i tatxar-lo, que no està definit a CommonMark.
 
 ## Característiques principals de Markdown
 
