@@ -136,13 +136,41 @@ Això es renderitza de la següent forma:
 
 A partir de la capçalera de nivell 6 (no inclòs), no es renderitzen més nivells de capçalera.
 
+### Imatges
+
+Podem inserir imatges, amb la següent sintaxi:
+
+```markdown
+![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)
+```
+
+Que es renderitza així:
+
+![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)
+
+El signe d'exclamació (`!`) indica que es tracta d'una imatge. Les imatges necessiten text alternatiu (definit amb `[text alternatiu]`), que és el que es renderitzarà si la imatge no s'ha pogut carregar, i el que es llegirà en TTS (*Text To Speech*), per a persones amb visibilitat reduïda.
+
+Per últim, s'ha d'indicar des d'on volem carregar la imatge, amb els parèntesis [`(ruta/a/la/imatge)`]. Aquesta ruta pot ser tant local (relativa/absoluta), com externa, carregant-la mitjançant HTTPS per exemple.
+
+Com a prova, podem veure què passa si no es pot carregar la imatge correctament, i la envoltem amb dobles asteriscs:
+
+```markdown
+**![text alternatiu, que es mostra en cas de problema al carregar la imatge](/ruta/intexistent/imatge.png)**
+```
+
+Es renderitza així, ja que la imatge no existeix:
+
+**![text alternatiu, que es mostra en cas de problema al carregar la imatge](/ruta/intexistent/imatge.png)**
+
+Però també veiem que el text està en negreta. Aquests asteriscs no tindríen efecte en el cas de que la imatge sí que s'haguès carregat correctament.
+
 ### Hipervincles
+
+[![cara amb somriure](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+kJERIiEL2NkzsAAAB9SURBVCjP5ZCxDQQhDATNJZRABXQCPbiW7cCl4BrcAVWQUQA5F3yC7jnpgg9eusl215KlIfpXmFlVv3sREZG1Oei9iEgp5W5VVWa+Wso5b69baymlzdB7r7WuDYAxhpmZ2f71nHPdLvGDW4OZxRi990QUQnDOPRIAAMDPhJ7ecy8l7KILGQAAAABJRU5ErkJggg==)](https://github.com)
 
 ### Llistes
 
 ### Taules
-
-### Imatges
 
 ### Cites en bloc
 
