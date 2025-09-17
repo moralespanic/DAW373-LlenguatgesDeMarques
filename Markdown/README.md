@@ -86,6 +86,12 @@ Per aplicar *cursiva* o _itàlica_ a un text, podem envoltar-lo d'asteriscs o de
 _Text d'exemple 2._
 ```
 
+Que es renderitza de la següent forma:
+
+*Text d'exemple 1.*
+
+_Text d'exemple 2._
+
 Per aplicar **negreta** a un text, podem envoltar-lo de dobles asteriscs, o de dobles guions baixos:
 
 ```markdown
@@ -93,6 +99,12 @@ Per aplicar **negreta** a un text, podem envoltar-lo de dobles asteriscs, o de d
 
 __Text d'exemple 2.__
 ```
+
+Que es renderitza de la següent forma:
+
+**Text d'exemple 1.**
+
+__Text d'exemple 2.__
 
 ### Capçaleres
 
