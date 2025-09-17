@@ -4,7 +4,7 @@ Aquest és el primer llenguatge de marques que he estudiat a DAW.
 
 És un llenguatge de marques amplament utilitzat, que es fa servir per formatar text de manera senzilla i fàcil de llegir. La seva simplicitat el fa molt popular, ja que requereix de molts pocs símbols per cada funcionalitat, al contrari d'altres llenguatges de marques com HTML, que requereixen d'escriure paraules llargues, i repetides vegades. S'utilitza sovint a documentació en general, però també s'implementa a molts llocs web/aplicacions, com ara GitHub, Discord, WhatsApp i ChatGPT.
 
-Els documents escrits en Markdown tenen una extensió .**md** (**M**ark**d**own). Aquest mateix document (*README.md*) està escrit en Markdown.
+Els documents escrits en Markdown tenen una extensió .**md** (**M**ark**d**own). Aquest mateix document (*README.md*) està escrit en Markdown. A més, Markdown té el seu propi tipus MIME (*Multipurpose Internet Mail Extensions*), que és `text/markdown`.
 
 Per exemple, per escriure un text amb negreta, s'ha d'escriure de la següent forma:
 ```markdown
@@ -19,6 +19,8 @@ Markdown és un llenguatge que va ser creat per John Gruber a l'any 2004, que ve
 Per solucionar aquest problema, va aparèixer **CommonMark**, que és un estàndard de Markdown pensat per ser fàcil d'entendre i implementar a les aplicacions. El [manual](https://commonmark.org/help/) d'aquest estàndard és més extens i fàcil d'entendre que l'original.
 
 Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no estan obligades a implementar-lo. Existeixen molts exemples d'aplicacions que no implementen Markdown seguint CommonMark, ja que no requereixen de totes les funcionalitats que aquest aporta. Un exemple molt clar és WhatsApp, que es basa en Markdown per donar alguns estils tipogràfics bàsics i crear blocs de codi, però no permet escollir el llenguatge de programació del bloc de codi, ni crear taules. A més, WhatsApp permet subratllar text i tatxar-lo, que no està definit a CommonMark.
+
+Els documents Markdown que segueixen CommonMark tenen el seu propi tipus MIME, que és `text/markdown; variant=CommonMark`.
 
 ## Característiques principals de Markdown
 
