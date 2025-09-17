@@ -18,7 +18,7 @@ Cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només
 
 La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
-Però hi ha una excepció; moltes aplicacions (no totes) permeten incloure HTML dincs d'un document de Markdown, com per exemple:
+Però hi ha una excepció; algunes aplicacions (no totes) permeten incloure HTML dincs d'un document de Markdown, com per exemple:
 
 ```
 <html>
@@ -32,13 +32,17 @@ Que es renderitza així:
 ---
 
 <html>
-    <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">gos</b>:</p>
-    <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: auto; border-radius: 50px">
+    <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">GOOFY DAWG</b>:</p>
+    <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: 100px; border-radius: 50px">
 </html>
 
 ---
 
-> La imatge del gos la he tret de [Flickr](https://flic.kr/p/4VRgLc).
+Com es pot veure, a la paraula "gos", només s'aplica la negreta, i no el color de text, ni la font ni la mida. A la imatge, tampoc s'apliquen les esquines arrodonides, però sí la mida.
+
+Això és degut a que GitHub imposa l'ús de les seves pròpies fonts, mida de text, color i altres paràmetres dels elements del DOM (*Document Object Model*).
+
+> La imatge del gos la he tret de [Flickr](https://www.flickr.com/photos/kb35/2578458103/).
 
 També, existeixen moltes altres funcionalitats de Markdown que algunes aplicacions implementen, i d'altres no.
 
