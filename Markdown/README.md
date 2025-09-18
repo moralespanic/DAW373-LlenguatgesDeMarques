@@ -43,7 +43,7 @@ Línia 3
 
 Si volem fer que entre dues línies no hi hagi una de buida, ho podem fer afegint dos espais al final de la primera de les dues línies. Aquí va un exemple:
 
-```
+```mardown
 Hola, bon dia.
 
 Em dic Pau, i estudio 1er de DAW 
@@ -175,6 +175,8 @@ Podem inserir imatges, amb la següent sintaxi:
 Que es renderitza així:
 
 ![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)
+
+> El fet de que aquesta imatge sigui clickable és cosa de GitHub. Per protegir l'adreça IP del lector, GitHub fa que la imatge que es mostra es carregui des d'un domini de GitHub (`camo.githubusercontent.com`), que per darrere la carrega des del servidor real.
 
 El signe d'exclamació (`!`) indica que es tracta d'una imatge. Les imatges necessiten text alternatiu (definit amb `[text alternatiu]`), que és el que es renderitzarà si la imatge no s'ha pogut carregar, i el que es llegirà en TTS (*Text To Speech*), per a persones amb visibilitat reduïda.
 
