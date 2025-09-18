@@ -16,13 +16,14 @@ I queda així: **Text en negreta**
 
 Markdown és un llenguatge que va ser creat per John Gruber a l'any 2004, que venía amb una [documentació](https://daringfireball.net/projects/markdown/syntax) bastant pobre i ambigua; no deixava clar com s'havía d'implementar Markdown. Això va portar a que cada aplicació implementès aquest llenguatge *a la seva manera*, cosa que va portar a inconsistències entre aplicacions.
 
-Per solucionar aquest problema, va aparèixer **CommonMark**, que és un estàndard de Markdown pensat per ser fàcil d'entendre i implementar a les aplicacions. El [manual](https://commonmark.org/help/) d'aquest estàndard és més extens i fàcil d'entendre que l'original.
-
-Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no estan obligades a implementar-lo. Existeixen molts exemples d'aplicacions que no implementen Markdown seguint CommonMark, ja que no requereixen de totes les funcionalitats que aquest aporta. Un exemple molt clar és WhatsApp, que es basa en Markdown per donar alguns estils tipogràfics bàsics i crear blocs de codi, però no permet escollir el llenguatge de programació del bloc de codi, ni crear taules. A més, WhatsApp permet subratllar text i tatxar-lo, que no està definit a CommonMark.
+Per solucionar aquest problema, va aparèixer **CommonMark**, que és un estàndard de Markdown pensat per ser fàcil d'entendre i implementar a les aplicacions. El [manual](https://commonmark.org/help/) d'aquest estàndard és més extens i fàcil d'entendre que l'original.  
+Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no estan obligades a implementar-lo. Existeixen molts exemples d'aplicacions que no implementen aquest llenguatge seguint CommonMark, ja que no requereixen de totes les funcionalitats que aquest aporta. Un exemple molt clar és WhatsApp, que es basa en Markdown per donar alguns estils tipogràfics bàsics i crear blocs de codi, però no permet escollir el llenguatge de programació del bloc de codi, ni crear taules. A més, WhatsApp permet subratllar text i tatxar-lo, que no està definit a CommonMark.
 
 Els documents Markdown que segueixen CommonMark tenen el seu propi tipus MIME, que és `text/markdown; variant=CommonMark`.
 
 ## Característiques principals de Markdown
+
+### Salts de línia
 
 Cal que per cada salt de línia, deixem una línia entre mig, ja que si no, les dues línies es renderitzaran compactades en una mateixa línia:
 
@@ -40,10 +41,37 @@ Línia 1
 Línia 2
 Línia 3
 
+Si volem fer que entre dues línies no hi hagi una de buida, ho podem fer afegint dos espais al final de la primera de les dues línies. Aquí va un exemple:
+
+```
+Hola, bon dia.
+
+Em dic Pau, i estudio 1er de DAW 
+al Cendrassos.
+
+Què diu una foca que li agraden molt les xarxes?  
+ARP! ARP! ARP!
+```
+
+A la línia "Què diu una foca...", he posat dos espais al final:
+
+---
+
+Hola, bon dia.
+
+Em dic Pau, i estudio 1er de DAW 
+al Cendrassos.
+
+Què diu una foca que li agraden molt les xarxes?  
+ARP! ARP! ARP!
+
+---
+
 Això és una característica que podríem aprofitar per si tenim massa text, i el volem estructurar dins del fitxer md, però que a l'hora de renderitzar-lo, que es vegi tot al mateix paràgraf.
 
-Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a totes les aplicacions.
+### Markdown no es veu igual a tots llocs
 
+Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a totes les aplicacions.  
 La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
 Però hi ha una excepció; algunes aplicacions permeten incloure HTML dincs d'un document de Markdown, com per exemple:
