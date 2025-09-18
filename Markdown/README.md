@@ -166,7 +166,25 @@ Però també veiem que el text està en negreta. Aquests asteriscs no tindríen 
 
 ### Hipervincles
 
-![cara amb somriure](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+kJERIiEL2NkzsAAAB9SURBVCjP5ZCxDQQhDATNJZRABXQCPbiW7cCl4BrcAVWQUQA5F3yC7jnpgg9eusl215KlIfpXmFlVv3sREZG1Oei9iEgp5W5VVWa+Wso5b69baymlzdB7r7WuDYAxhpmZ2f71nHPdLvGDW4OZxRi990QUQnDOPRIAAMDPhJ7ecy8l7KILGQAAAABJRU5ErkJggg==)
+Podem inserir hipervincles, amb la següent sintaxi:
+
+```
+[Text de l'hipervincle](https://github.com/)
+```
+
+Es renderitzarà de la següent forma
+
+[Text de l'hipervincle](https://github.com/)
+
+Com que ja sabem inserir imatges, podem fer una imatge clickable:
+
+```
+[![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)](https://kernel.org/)
+```
+
+Ara, tindrem al Tux, que ens redigirà amablement a la web del kernel de Linux:
+
+[![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)](https://kernel.org/)
 
 ### Llistes
 
