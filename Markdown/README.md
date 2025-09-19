@@ -64,9 +64,9 @@ ARP! ARP! ARP!
 
 ---
 
-Això és una característica que podríem aprofitar per si tenim massa text, i el volem estructurar dins del fitxer md, però que a l'hora de renderitzar-lo, que es vegi tot al mateix paràgraf.
+Això és una característica que podríem aprofitar per si tenim massa text, i el volem estructurar dins del fitxer md, però a l'hora de renderitzar-lo, que es vegi tot al mateix paràgraf.
 
-> Nota: Només aplica per paràgrafs.
+> Nota: Només aplica per a paràgrafs.
 
 ### Markdown no es veu igual a tots llocs
 Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a totes les aplicacions.  
@@ -162,7 +162,7 @@ A partir de la capçalera de nivell 6 (no inclòs), no es renderitzen més nivel
 
 Per les capçaleres de nivell 1 i 2, podem fer servir els símbols `=` (nivell 1) i `-` (nivell 2). De la següent forma:
 
-```
+```markdown
 Capçalera de nivell 1
 =====================
 Capçalera de nivell 2
@@ -205,11 +205,10 @@ Es renderitza així, ja que la imatge no existeix:
 
 Però també veiem que el text està en negreta. Aquests asteriscs no tindríen efecte en el cas de que la imatge sí que s'haguès carregat correctament.
 
-6. Sisé element0o¡9
 ### Hipervincles
 Podem inserir hipervincles, amb la següent sintaxi:
 
-```
+```markdown
 [Text de l'hipervincle](https://github.com/)
 ```
 
@@ -219,7 +218,7 @@ Es renderitzarà de la següent forma
 
 Com que ja sabem inserir imatges, podem fer una imatge clickable:
 
-```
+```markdown
 [![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)](https://kernel.org/)
 ```
 
@@ -228,7 +227,6 @@ Ara, tindrem al Tux, que ens redigirà amablement a la web del kernel de Linux:
 [![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)](https://kernel.org/)
 
 ### Llistes
-
 Tenim tres tipus de llistes:
 * Llistes simples
 * Llistes numerades
@@ -276,15 +274,34 @@ Per darrere, això deu funcionar amb algun tipus de regex, com aquesta: `^\d+\.\
 
 Per últim, comentaré les llistes de tasques, que inclouen un *checkbox* que pot estar marcat o no:
 
-```
+```markdown
 - [ ] Tasca sense fer
 - [X] Tasca feta 
 ```
 
-- [ ] Tasca sense fer
+- [ ] Tasca sense ferhtml
 - [X] Tasca feta 
 
 ### Taules
+Les taules tenen una sintaxi molt senzilla i intuitiva:
+
+```markdown
+|  Columna 1  |  Columna 2  |  Columna 3  |
+|-------------|-------------|-------------|
+| Element 1a  | Element 2a  | Element 3a  |
+| Element 1b  | Element 2b  | Element 3b  |
+| Element 1c  | Element 2c  | Element 3c  |
+```
+
+|  Columna 1  |  Columna 2  |  Columna 3  |
+|-------------|-------------|-------------|
+| Element 1a  | Element 2a  | Element 3a  |
+| Element 1b  | Element 2b  | Element 3b  |
+| Element 1c  | Element 2c  | Element 3c  |
+
+És indiferent si col·loquem els símbols (`|` i `-`) de forma diferent que a l'exemple, ja que la taula es renderitzarà exactament igual, col·loquem on col·loquem els símbols. Jo els he col·locat d'aquesta forma per a que sigui més fàcil de llegir a l'editar el fitxer MD.
+
+També podem alinear els 
 
 ### Cites en bloc
 
