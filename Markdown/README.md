@@ -248,6 +248,24 @@ Les llistes numerades tenen la següent sintaxi, i poden començar per qualsevol
 2. Segon element
 3. Tercer element
 4. Quart element
+5. Cinquè element
+6. Sisè element
+7. Setè element
+8. Vuitè element
+9. Novè element
+10. Desè element
+11. Onzè element
+...
+```
+
+M'he saltat uns quants elements, i he barrejat números per veure què passava:
+
+```markdown
+0. Element 0
+1. Primer element
+2. Segon element
+3. Tercer element
+4. Quart element
 0. Element 0
 8. Vuité element
 9. Novè element
@@ -255,7 +273,7 @@ Les llistes numerades tenen la següent sintaxi, i poden començar per qualsevol
 7. Setè element
 ```
 
-M'he saltat uns quants elements, i he barrejat números per veure què passava:
+Que es renderitza així:
 
 0. Element 0
 1. Primer element
@@ -321,7 +339,7 @@ També podem alinear el text de les columnes horitzontalment, mitjançant el sí
 Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al que correspon a la columna. El text l'he alineat mitjançant espais per tenir-lo més "ordenat" a nivell d'editor, però, com en altres casos, no afecta en absolut a com es veurà el document al renderitzar-lo.
 
 |                   Columna alineada a la dreta |               Columna al. centre                | Columna alineada a l'esquerra                     |
-|----------------------------------------------:|:-------------------------------------------------------:|:--------------------------------------------------|
+|----------------------------------------------:|:-----------------------------------------------:|:--------------------------------------------------|
 |                                Element dret A |                Element central A                | Element esquerre A                                |
 |                                Element dret B |                Element central B                | Element esquerre B................................|
 |................................Element dret C |                Element central C                | Element esquerre C                                |
