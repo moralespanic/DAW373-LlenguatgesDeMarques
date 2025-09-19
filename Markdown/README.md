@@ -303,9 +303,9 @@ Les taules tenen una sintaxi molt senzilla i intuitiva:
 
 També podem alinear el text de les columnes horitzontalment, mitjançant el símbol `:`. Per defecte, les columnes s'alineen a l'esquerra, però ho podem canviar, a la segona línia de la taula, la que té les sèries de guions (`|---|---|---|---|---|`):
 
-- `|-:|` Alinea la columna a l'esquerra
+- `|:-|` Alinea la columna a l'esquerra
 - `|:-:|` Alinea la columna al centre
-- `|:-|` Alinea la columna a la dreta
+- `|-:|` Alinea la columna a la dreta
 
 ```markdown
 |      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
@@ -320,16 +320,17 @@ També podem alinear el text de les columnes horitzontalment, mitjançant el sí
 
 Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al que correspon a la columna. El text l'he alineat mitjançant espais per tenir-lo més "ordenat" a nivell d'editor, però, com en altres casos, no afecta en absolut a com es veurà el document al renderitzar-lo.
 
-|      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
-|---------------------------------:|:----------------------------:|:------------------------------------|
-|                   Element dret A |      Element central A       | Element esquerre A                  |
-|                   Element dret B |      Element central B       | Element esquerre B                  |
-|                   Element dret C |      Element central C       | Element esquerre C                  |
-|                   Element dret D |      Element central D       | Element esquerre D                  |
-|                   Element dret E |      Element central E       | Element esquerre E                  |
-|                   Element dret F |      Element central F       | Element esquerre F                  |
+|              Columna alineada a la dreta |   Columna alineada al centre   |  Columna alineada a l'esquerra           |
+|-----------------------------------------:|:------------------------------:|:-----------------------------------------|
+|                           Element dret A |........Element central A       | Element esquerre A                       |
+|                           Element dret B |        Element central B       | Element esquerre B.......................|
+|...........................Element dret C |        Element central C       | Element esquerre C                       |
+|                           Element dret D |        Element central D       | Element esquerre D                       |
+|                           Element dret E |        Element central E       | Element esquerre E                       |
+|                           Element dret F |        Element central F       | Element esquerre F                       |
 
-El text de la primera fila també s'alinea, però com que en aquest cas eren els textos més llargs, l'amplada de les columnes s'ha adaptat a la mida d'aquests.
+El text de la primera fila també s'alinea.
+Cada columna s'adapta a la mida de la fila més gran per aquella columna, cosa que farà que per cada columna, sempre hi hagi mínim una cel·la que sembli no estar alineada, ja que l'amplada de la columna s'adapta a aquesta/aquestes (poden ser vàries amb la mateixa mida.)
 
 ### Cites en bloc
 
