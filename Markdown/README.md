@@ -1,5 +1,4 @@
 # Markdown
-
 Aquest és el primer llenguatge de marques que he estudiat a DAW.
 
 És un llenguatge de marques amplament utilitzat, que es fa servir per formatar text de manera senzilla i fàcil de llegir. La seva simplicitat el fa molt popular, ja que requereix de molts pocs símbols per cada funcionalitat, al contrari d'altres llenguatges de marques com HTML, que requereixen d'escriure paraules llargues, i repetides vegades. S'utilitza sovint a documentació en general, però també s'implementa a molts llocs web/aplicacions, com ara GitHub, Discord, WhatsApp i ChatGPT.
@@ -13,7 +12,6 @@ Per exemple, per escriure un text amb negreta, s'ha d'escriure de la següent fo
 I queda així: **Text en negreta**
 
 ## CommonMark
-
 Markdown és un llenguatge que va ser creat per John Gruber a l'any 2004, que venía amb una [documentació](https://daringfireball.net/projects/markdown/syntax) bastant pobre i ambigua; no deixava clar com s'havía d'implementar Markdown. Això va portar a que cada aplicació implementès aquest llenguatge *a la seva manera*, cosa que va portar a inconsistències entre aplicacions.
 
 Per solucionar aquest problema, va aparèixer **CommonMark**, que és un estàndard de Markdown pensat per ser fàcil d'entendre i implementar a les aplicacions. El [manual](https://commonmark.org/help/) d'aquest estàndard és més extens i fàcil d'entendre que l'original.  
@@ -24,7 +22,6 @@ Els documents Markdown que segueixen CommonMark tenen el seu propi tipus MIME, q
 ## Característiques principals de Markdown
 
 ### Salts de línia
-
 Cal que per cada salt de línia, deixem una línia entre mig, ja que si no, les dues línies es renderitzaran compactades en una mateixa línia:
 
 ```markdown
@@ -69,8 +66,9 @@ ARP! ARP! ARP!
 
 Això és una característica que podríem aprofitar per si tenim massa text, i el volem estructurar dins del fitxer md, però que a l'hora de renderitzar-lo, que es vegi tot al mateix paràgraf.
 
-### Markdown no es veu igual a tots llocs
+> Nota: Només aplica per paràgrafs.
 
+### Markdown no es veu igual a tots llocs
 Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a totes les aplicacions.  
 La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
@@ -103,11 +101,9 @@ Això és degut a que GitHub (i moltes altres aplicacions) imposa l'ús de les s
 També, existeixen moltes altres funcionalitats de Markdown que algunes aplicacions implementen, i d'altres no. Jo em centraré principalment en les que GitHub implementa, ja que GitHub té una implementació de Markdown molt extensa.
 
 ## Funcionalitats bàsiques de Markdown
-
 Aquestes són les funcionalitats més bàsiques de Markdown, i totes les aplicacions que segueixin CommonMark les hauríen d'implementar. No sé si hi són totes, però sí que n'hi ha una gran part (les més importants).
 
 ### Estils tipogràfics
-
 Per aplicar *cursiva* o _itàlica_ a un text, podem envoltar-lo d'asteriscs o de guions baixos:
 
 ```markdown
@@ -140,7 +136,7 @@ __Text d'exemple 2.__
 
 Les capçaleres s'utilitzen per estructurar un document, mitjançant títols o apartats.
 
-Per crear una capçalera, s'ha d'escriure un coixinet (#) seguit del títol. Tenim fins a 6 nivells de capçalera:
+Per crear una capçalera, es poden escriure coixinets (#) seguits del títol. Tenim fins a 6 nivells de capçalera:
 
 ```markdown
 # Capçalera de nivell 1
@@ -164,8 +160,23 @@ Això es renderitza de la següent forma:
 
 A partir de la capçalera de nivell 6 (no inclòs), no es renderitzen més nivells de capçalera.
 
-### Imatges
+Per les capçaleres de nivell 1 i 2, podem fer servir els símbols `=` (nivell 1) i `-` (nivell 2). De la següent forma:
 
+```
+Capçalera de nivell 1
+=====================
+Capçalera de nivell 2
+---------------------
+```
+
+El nombre de símbols (`=` i `-`) és indiferent; jo he posat tants per a que quedi més estètic, però no és necessari:
+
+Capçalera de nivell 1
+=====================
+Capçalera de nivell 2
+---------------------
+
+### Imatges
 Podem inserir imatges, amb la següent sintaxi:
 
 ```markdown
@@ -176,7 +187,7 @@ Que es renderitza així:
 
 ![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)
 
-> El fet de que aquesta imatge sigui clickable és cosa de GitHub. Per protegir l'adreça IP del lector, GitHub fa que la imatge que es mostra es carregui des d'un domini de GitHub (`camo.githubusercontent.com`), que per darrere la carrega des del servidor real.
+> El fet de que aquesta imatge sigui clickable és cosa de GitHub. Per protegir l'adreça IP del lector, GitHub fa que la imatge que es mostra es carregui des d'un domini de GitHub (`camo.githubusercontent.com`), que per darrere la carrega des del servidor real. Això fa que s'emmascari l'adreça IP del lector, i evita que el navegador faci peticions directament al servidor que hosteja la imatge. Però el fet de que sigui clickable no té gaire explicació, ja que amb carregar la imatge des d'un servidor de GitHub ja és suficient.
 
 El signe d'exclamació (`!`) indica que es tracta d'una imatge. Les imatges necessiten text alternatiu (definit amb `[text alternatiu]`), que és el que es renderitzarà si la imatge no s'ha pogut carregar, i el que es llegirà en TTS (*Text To Speech*), per a persones amb visibilitat reduïda.
 
@@ -194,8 +205,8 @@ Es renderitza així, ja que la imatge no existeix:
 
 Però també veiem que el text està en negreta. Aquests asteriscs no tindríen efecte en el cas de que la imatge sí que s'haguès carregat correctament.
 
+6. Sisé element0o¡9
 ### Hipervincles
-
 Podem inserir hipervincles, amb la següent sintaxi:
 
 ```
@@ -218,6 +229,61 @@ Ara, tindrem al Tux, que ens redigirà amablement a la web del kernel de Linux:
 
 ### Llistes
 
+Tenim tres tipus de llistes:
+* Llistes simples
+* Llistes numerades
+* Llistes de tasques
+
+La llista de dalt és una llista simple. La seva sintaxi és la següent:
+
+```markdown
+* Llistes simples
+* Llistes numerades
+* Llistes de tasques
+```
+
+Les llistes numerades tenen la següent sintaxi:
+
+```markdown
+0. Element 0
+1. Primer element
+2. Segon element
+3. Tercer element
+4. Quart element
+0. Element 0
+8. Vuité element
+9. Novè element
+1. Primer element
+7. Setè element
+```
+
+M'he saltat uns quants elements, i he barrejat números per veure què passava:
+
+0. Element 0
+1. Primer element
+2. Segon element
+3. Tercer element
+4. Quart element
+0. Element 0
+8. Vuité element
+9. Novè element
+1. Primer element
+7. Setè element
+
+Sembla que quan comença una llista numèrica, ignora completament la resta de números, i els renderitza com si fossin consecutius.
+
+Per darrere, això deu funcionar amb algun tipus de regex, com aquesta: `^\d+\.\ .*$`
+
+Per últim, comentaré les llistes de tasques, que inclouen un *checkbox* que pot estar marcat o no:
+
+```
+- [ ] Tasca sense fer
+- [X] Tasca feta 
+```
+
+- [ ] Tasca sense fer
+- [X] Tasca feta 
+
 ### Taules
 
 ### Cites en bloc
@@ -226,15 +292,14 @@ Ara, tindrem al Tux, que ens redigirà amablement a la web del kernel de Linux:
 
 ### Línies horitzontals
 
-### Llistes de tasques
-
 ### Notes al peu
 
 ## Funcionalitats avançades de Markdown
-
 Aquestes funcionalitats no tenen per què estar implementades a totes les aplicacions que suporten Markdown, ja que no estan a l'estàndard CommonMark.
 
 ### HTML incrustat
+
+Entitats de carácter, com ara `&nbsp;`, `&amp;`, `&gt;`
 
 ### Emojis
 
