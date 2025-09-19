@@ -12,7 +12,7 @@ Per exemple, per escriure un text amb negreta, s'ha d'escriure de la següent fo
 I queda així: **Text en negreta**
 
 ## CommonMark
-Markdown és un llenguatge que va ser creat per John Gruber a l'any 2004, que venía amb una [documentació](https://daringfireball.net/projects/markdown/syntax) bastant pobre i ambigua; no deixava clar com s'havía d'implementar Markdown. Això va portar a que cada aplicació implementès aquest llenguatge *a la seva manera*, cosa que va portar a inconsistències entre aplicacions.
+Markdown és un llenguatge que va ser creat per John Gruber a l'any 2004, que venía amb una [documentació](https://daringfireball.net/projects/markdown/syntax) bastant pobre i ambigua; no deixava clar com s'havia d'implementar Markdown. Això va portar a que cada aplicació implementés aquest llenguatge *a la seva manera*, cosa que va portar a inconsistències entre aplicacions.
 
 Per solucionar aquest problema, va aparèixer **CommonMark**, que és un estàndard de Markdown pensat per ser fàcil d'entendre i implementar a les aplicacions. El [manual](https://commonmark.org/help/) d'aquest estàndard és més extens i fàcil d'entendre que l'original.  
 Tot i que CommonMark és l'estàndard actual de Markdown, les aplicacions no estan obligades a implementar-lo. Existeixen molts exemples d'aplicacions que no implementen aquest llenguatge seguint CommonMark, ja que no requereixen de totes les funcionalitats que aquest aporta. Un exemple molt clar és WhatsApp, que es basa en Markdown per donar alguns estils tipogràfics bàsics i crear blocs de codi, però no permet escollir el llenguatge de programació del bloc de codi, ni crear taules. A més, WhatsApp permet subratllar text i tatxar-lo, que no està definit a CommonMark.
@@ -73,10 +73,9 @@ Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que 
 La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
 Però hi ha una excepció; algunes aplicacions permeten incloure HTML dincs d'un document de Markdown, com per exemple:
-
 ```html
 <html>
-    <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">gos</b>:</p>
+    <p>Aquesta és una imatge d'un <b style="font-family: sans-serif; font-size: 20px;color: red">gos</b>:</p>
     <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: auto; border-radius: 50px">
 </html>
 ```
@@ -84,12 +83,10 @@ Però hi ha una excepció; algunes aplicacions permeten incloure HTML dincs d'un
 Que es renderitza així:
 
 ---
-
 <html>
-    <p>Aquesta és una imatge d'un <b style="font-family: sans-seriff; font-size: 20px;color: red">gos</b>:</p>
+    <p>Aquesta és una imatge d'un <b style="font-family: sans-serif; font-size: 20px;color: red">gos</b>:</p>
     <img src="../assets/Gos.jpg" alt="gos goofy" style="width: 500px; height: auto; border-radius: 50px">
 </html>
-
 ---
 
 Com es pot veure, a la paraula "gos", només s'aplica la negreta, i no el color de text, ni la font ni la mida. A la imatge, tampoc s'apliquen les esquines arrodonides, però sí la mida.
@@ -105,7 +102,6 @@ Aquestes són les funcionalitats més bàsiques de Markdown, i totes les aplicac
 
 ### Estils tipogràfics
 Per aplicar *cursiva* o _itàlica_ a un text, podem envoltar-lo d'asteriscs o de guions baixos:
-
 ```markdown
 *Text d'exemple 1.*
 
@@ -119,7 +115,6 @@ Que es renderitza de la següent forma:
 _Text d'exemple 2._
 
 Per aplicar **negreta** a un text, podem envoltar-lo de dobles asteriscs, o de dobles guions baixos:
-
 ```markdown
 **Text d'exemple 1.**
 
@@ -161,7 +156,6 @@ Això es renderitza de la següent forma:
 A partir de la capçalera de nivell 6 (no inclòs), no es renderitzen més nivells de capçalera.
 
 Per les capçaleres de nivell 1 i 2, podem fer servir els símbols `=` (nivell 1) i `-` (nivell 2). De la següent forma:
-
 ```markdown
 Capçalera de nivell 1
 =====================
@@ -178,7 +172,6 @@ Capçalera de nivell 2
 
 ### Imatges
 Podem inserir imatges, amb la següent sintaxi:
-
 ```markdown
 ![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)
 ```
@@ -194,7 +187,6 @@ El signe d'exclamació (`!`) indica que es tracta d'una imatge. Les imatges nece
 Per últim, s'ha d'indicar des d'on volem carregar la imatge, amb els parèntesis [`(ruta/a/la/imatge)`]. Aquesta ruta pot ser tant local (relativa/absoluta), com externa, carregant-la mitjançant HTTPS per exemple.
 
 Com a prova, podem veure què passa si no es pot carregar la imatge correctament, i la envoltem amb dobles asteriscs:
-
 ```markdown
 **![text alternatiu, que es mostra en cas de problema al carregar la imatge](/ruta/intexistent/imatge.png)**
 ```
@@ -203,11 +195,10 @@ Es renderitza així, ja que la imatge no existeix:
 
 **![text alternatiu, que es mostra en cas de problema al carregar la imatge](/ruta/intexistent/imatge.png)**
 
-Però també veiem que el text està en negreta. Aquests asteriscs no tindríen efecte en el cas de que la imatge sí que s'haguès carregat correctament.
+Però també veiem que el text està en negreta. Aquests asteriscs no tindríen efecte en el cas de que la imatge sí que s'hagués carregat correctament.
 
 ### Hipervincles
 Podem inserir hipervincles, amb la següent sintaxi:
-
 ```markdown
 [Text de l'hipervincle](https://github.com/)
 ```
@@ -217,7 +208,6 @@ Es renderitzarà de la següent forma
 [Text de l'hipervincle](https://github.com/)
 
 Com que ja sabem inserir imatges, podem fer una imatge clickable:
-
 ```markdown
 [![Pingüí Tux de Linux](https://www.kernel.org/theme/images/logos/tux.png)](https://kernel.org/)
 ```
@@ -233,7 +223,6 @@ Tenim tres tipus de llistes:
 * Llistes de tasques
 
 La llista de dalt és una llista simple. La seva sintaxi és la següent:
-
 ```markdown
 * Llistes simples
 * Llistes numerades
@@ -241,7 +230,6 @@ La llista de dalt és una llista simple. La seva sintaxi és la següent:
 ```
 
 Les llistes numerades tenen la següent sintaxi, i poden començar per qualsevol número:
-
 ```markdown
 0. Element 0
 1. Primer element
@@ -259,7 +247,6 @@ Les llistes numerades tenen la següent sintaxi, i poden començar per qualsevol
 ```
 
 M'he saltat uns quants elements, i he barrejat números per veure què passava:
-
 ```markdown
 0. Element 0
 1. Primer element
@@ -291,7 +278,6 @@ Sembla que quan comença una llista numèrica, ignora completament la resta de n
 Per darrere, això deu funcionar amb algun tipus de regex, com aquesta: `^\d+\.\ .*$`
 
 Per últim, comentaré les llistes de tasques, que inclouen un *checkbox* que pot estar marcat o no:
-
 ```markdown
 - [ ] Tasca sense fer
 - [X] Tasca feta 
@@ -302,7 +288,6 @@ Per últim, comentaré les llistes de tasques, que inclouen un *checkbox* que po
 
 ### Taules
 Les taules tenen una sintaxi molt senzilla i intuitiva:
-
 ```markdown
 |  Columna 1  |  Columna 2  |  Columna 3  |
 |-------------|-------------|-------------|
@@ -324,7 +309,6 @@ També podem alinear el text de les columnes horitzontalment, mitjançant el sí
 - `|:-|` Alinea la columna a l'esquerra
 - `|:-:|` Alinea la columna al centre
 - `|-:|` Alinea la columna a la dreta
-
 ```markdown
 |      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
 |---------------------------------:|:----------------------------:|:------------------------------------|
