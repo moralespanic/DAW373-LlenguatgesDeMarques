@@ -279,7 +279,7 @@ Per últim, comentaré les llistes de tasques, que inclouen un *checkbox* que po
 - [X] Tasca feta 
 ```
 
-- [ ] Tasca sense ferhtml
+- [ ] Tasca sense fer
 - [X] Tasca feta 
 
 ### Taules
@@ -293,7 +293,7 @@ Les taules tenen una sintaxi molt senzilla i intuitiva:
 | Element 1c  | Element 2c  | Element 3c  |
 ```
 
-|  Columna 1  |  Columna 2  |  Columna 3  |
+|  Columna 1  |  Columna 2aaaaaaaaaaaaaaaa  |  Columna 3  |
 |-------------|-------------|-------------|
 | Element 1a  | Element 2a  | Element 3a  |
 | Element 1b  | Element 2b  | Element 3b  |
@@ -301,7 +301,7 @@ Les taules tenen una sintaxi molt senzilla i intuitiva:
 
 És indiferent si col·loquem els símbols (`|` i `-`) de forma diferent que a l'exemple, ja que la taula es renderitzarà exactament igual, col·loquem on col·loquem els símbols. Jo els he col·locat d'aquesta forma per a que sigui més fàcil de llegir a l'editar el fitxer MD.
 
-També podem alinear els 
+També podem alinear les columnes horitzontalment,
 
 ### Cites en bloc
 
