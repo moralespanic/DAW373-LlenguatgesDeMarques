@@ -68,7 +68,7 @@ Això és una característica que podríem aprofitar per si tenim massa text, i 
 
 > Nota: Només aplica per a paràgrafs.
 
-### Markdown no es veu igual a tots llocs
+### Markdown no es veu igual a tots arreu
 Cal recalcar que cada aplicació renderitza Markdown com tingui definit, ja que a Markdown només s'especifica l'estructura (capçaleres, taules, negretes, cursives...) del text, i no la font ni el color com a tal. Per tant, això que acabo de comentar no té per què aplicar-se a totes les aplicacions.  
 La forma en la que es renderitza Markdown és dependent de l'aplicació. Això vol dir que cada aplicació pot utilitzar una font tipogràfica diferent per renderitzar el text, i altres paràmetres com ara la mida del text, el color del text, el grossor de les línies, i qualsevol altre aspecte relacionat amb l'estètica.
 
@@ -293,7 +293,7 @@ Les taules tenen una sintaxi molt senzilla i intuitiva:
 | Element 1c  | Element 2c  | Element 3c  |
 ```
 
-|  Columna 1  |  Columna 2aaaaaaaaaaaaaaaa  |  Columna 3  |
+|  Columna 1  |  Columna 2  |  Columna 3  |
 |-------------|-------------|-------------|
 | Element 1a  | Element 2a  | Element 3a  |
 | Element 1b  | Element 2b  | Element 3b  |
@@ -301,7 +301,33 @@ Les taules tenen una sintaxi molt senzilla i intuitiva:
 
 És indiferent si col·loquem els símbols (`|` i `-`) de forma diferent que a l'exemple, ja que la taula es renderitzarà exactament igual, col·loquem on col·loquem els símbols. Jo els he col·locat d'aquesta forma per a que sigui més fàcil de llegir a l'editar el fitxer MD.
 
-També podem alinear les columnes horitzontalment,
+També podem alinear el text de les columnes horitzontalment, mitjançant el símbol `:`. Per defecte, les columnes s'alineen a l'esquerra, però ho podem canviar, a la segona línia de la taula, la que té les sèries de guions (`|---|---|---|---|---|`):
+
+- `|:-|` Alinea la columna a la dreta
+- `|:-:|` Alinea la columna al centre
+- `|-:|` Alinea la columna a l'esquerra
+
+```markdown
+|      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
+|---------------------------------:|:----------------------------:|:------------------------------------|
+|                   Element dret A |      Element central A       | Element esquerre A                  |
+|                   Element dret B |      Element central B       | Element esquerre B                  |
+|                   Element dret C |      Element central C       | Element esquerre C                  |
+|                   Element dret D |      Element central D       | Element esquerre D                  |
+|                   Element dret E |      Element central E       | Element esquerre E                  |
+|                   Element dret F |      Element central F       | Element esquerre F                  |
+```
+
+Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al que correspon a la columna. El text l'he alineat per tenir-lo més "ordenat" a nivell d'editor, però, com en altres casos, no afecta en absolut a com es veurà el document al renderitzar-lo.
+
+|      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
+|---------------------------------:|:----------------------------:|:------------------------------------|
+|                   Element dret A |      Element central A       | Element esquerre A                  |
+|                   Element dret B |      Element central B       | Element esquerre B                  |
+|                   Element dret C |      Element central C       | Element esquerre C                  |
+|                   Element dret D |      Element central D       | Element esquerre D                  |
+|                   Element dret E |      Element central E       | Element esquerre E                  |
+|                   Element dret F |      Element central F       | Element esquerre F                  |
 
 ### Cites en bloc
 
