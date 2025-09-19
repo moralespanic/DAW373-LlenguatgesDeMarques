@@ -320,17 +320,18 @@ També podem alinear el text de les columnes horitzontalment, mitjançant el sí
 
 Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al que correspon a la columna. El text l'he alineat mitjançant espais per tenir-lo més "ordenat" a nivell d'editor, però, com en altres casos, no afecta en absolut a com es veurà el document al renderitzar-lo.
 
-|              Columna alineada a la dreta |   Columna alineada al centre   |  Columna alineada a l'esquerra           |
-|-----------------------------------------:|:------------------------------:|:-----------------------------------------|
-|                           Element dret A |........Element central A       | Element esquerre A                       |
-|                           Element dret B |        Element central B       | Element esquerre B.......................|
-|...........................Element dret C |        Element central C       | Element esquerre C                       |
-|                           Element dret D |        Element central D       | Element esquerre D                       |
-|                           Element dret E |        Element central E       | Element esquerre E                       |
-|                           Element dret F |        Element central F       | Element esquerre F                       |
+|                   Columna alineada a la dreta |               Columna alineada al centre                | Columna alineada a l'esquerra                     |
+|----------------------------------------------:|:-------------------------------------------------------:|:--------------------------------------------------|
+|                                Element dret A |                    Element central A                    | Element esquerre A                                |
+|                                Element dret B |                    Element central B                    | Element esquerre B................................|
+|................................Element dret C |                    Element central C                    | Element esquerre C                                |
+|                                Element dret D |                    Element central D                    | Element esquerre D                                |
+|                                Element dret E |....................Element central E                    | Element esquerre E                                |
+|                                Element dret F |                    Element central F                    | Element esquerre F                                |
 
-El text de la primera fila també s'alinea.
-Cada columna s'adapta a la mida de la fila més gran per aquella columna, cosa que farà que per cada columna, sempre hi hagi mínim una cel·la que sembli no estar alineada, ja que l'amplada de la columna s'adapta a aquesta/aquestes (poden ser vàries amb la mateixa mida.)
+El text de la primera fila també s'alinea. Per comprovar-ho, he afegit punts (`.`) per ampliar la mida d'algunes cel·les:
+
+Cada columna s'adapta a la mida de la cel·la més gran per aquella columna, cosa que farà que per cada columna, sempre hi hagi, com a mínim, una cel·la que sembli no estar alineada, ja que l'amplada de la columna s'adaptará a aquesta/aquestes (poden ser vàries cel·les amb la mateixa mida).
 
 ### Cites en bloc
 
