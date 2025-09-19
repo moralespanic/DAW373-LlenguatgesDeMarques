@@ -240,7 +240,7 @@ La llista de dalt és una llista simple. La seva sintaxi és la següent:
 * Llistes de tasques
 ```
 
-Les llistes numerades tenen la següent sintaxi:
+Les llistes numerades tenen la següent sintaxi, i poden començar per qualsevol número:
 
 ```markdown
 0. Element 0
@@ -303,9 +303,9 @@ Les taules tenen una sintaxi molt senzilla i intuitiva:
 
 També podem alinear el text de les columnes horitzontalment, mitjançant el símbol `:`. Per defecte, les columnes s'alineen a l'esquerra, però ho podem canviar, a la segona línia de la taula, la que té les sèries de guions (`|---|---|---|---|---|`):
 
-- `|:-|` Alinea la columna a la dreta
-- `|:-:|` Alinea la columna al centre
 - `|-:|` Alinea la columna a l'esquerra
+- `|:-:|` Alinea la columna al centre
+- `|:-|` Alinea la columna a la dreta
 
 ```markdown
 |      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
@@ -318,7 +318,7 @@ També podem alinear el text de les columnes horitzontalment, mitjançant el sí
 |                   Element dret F |      Element central F       | Element esquerre F                  |
 ```
 
-Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al que correspon a la columna. El text l'he alineat per tenir-lo més "ordenat" a nivell d'editor, però, com en altres casos, no afecta en absolut a com es veurà el document al renderitzar-lo.
+Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al que correspon a la columna. El text l'he alineat mitjançant espais per tenir-lo més "ordenat" a nivell d'editor, però, com en altres casos, no afecta en absolut a com es veurà el document al renderitzar-lo.
 
 |      Columna alineada a la dreta |  Columna alineada al centre  |  Columna alineada a l'esquerra      |
 |---------------------------------:|:----------------------------:|:------------------------------------|
@@ -328,6 +328,8 @@ Observar que a les sèries de guions (`-`) he afegit el símbol `:` en base al q
 |                   Element dret D |      Element central D       | Element esquerre D                  |
 |                   Element dret E |      Element central E       | Element esquerre E                  |
 |                   Element dret F |      Element central F       | Element esquerre F                  |
+
+El text de la primera fila també s'alinea, però com que en aquest cas eren els textos més llargs, l'amplada de les columnes s'ha adaptat a la mida d'aquests.
 
 ### Cites en bloc
 
